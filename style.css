@@ -2,3 +2,40 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
+
+body {
+    width: 80vw;
+    height: 100vh;
+    background-color: pink;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+    gap: 10px;
+}
+
+#navbar {
+    position: fixed;
+    justify-content: stretch;
+    grid-area: header;
+    background-color: chocolate;
+    border-bottom: 5px solid black;
+}
+
+#welcome-section {
+    height: 100vh;
+}
+
+
+@media (max-width: 759px) {
+    body {
+        background-color:green;
+    }
+}
+
